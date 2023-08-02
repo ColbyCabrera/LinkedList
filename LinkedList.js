@@ -54,6 +54,7 @@ class LinkedList {
     if (index > this.listSize - 1|| index < 0) return "Out of list bounds";
     if (index == 0) {
       this.listHead = this.listHead.nextNode;
+      this.listSize--;
       return;
     }
 
@@ -66,7 +67,7 @@ class LinkedList {
 
     nodeAtIndexPlus1 = current.nextNode.nextNode;
     current.nextNode = nodeAtIndexPlus1;
-    this.listSize++;
+    this.listSize--;
   }
 
   size() {
